@@ -137,7 +137,7 @@ export const Container = styled('main',{
         "@xs": {
             fontSize: '8rem',
 
-            width: '18rem',
+            width: '15rem',
             height: '6rem'
         },
 
