@@ -44,7 +44,7 @@ export const Container = styled('main',{
         "@xs": {
             fontSize:'0.8rem',
 
-            width: '18rem',
+            width: '15rem',
             height: '18rem'
         },
 
@@ -134,7 +134,7 @@ export const Container = styled('main',{
             height: '7rem'
         },
 
-        "@sm": {
+        "@xs": {
             fontSize: '8rem',
 
             width: '18rem',

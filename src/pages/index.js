@@ -37,19 +37,12 @@ export default function Home() {
         const typeIcon = data.weather[0].main;
         if( typeIcon === 'Clouds') {
           setImgWeather(iconCloud);
-          console.log(data.weather[0].main)
         } else if(typeIcon === 'Clear') {
           setImgWeather(iconVerySun);
-          console.log(data.weather[0].main)
-
         } else if (typeIcon === 'Rain') {
           setImgWeather(iconRain);
-          console.log(data.weather[0].main)
-
         } else if (typeIcon === 'Snow') {
           setImgWeather(iconSnow);
-          console.log(data.weather[0].main)
-
         }
     });
 
@@ -111,7 +104,7 @@ export default function Home() {
       {returnWeather()}
 
       <Link href="https://github.com/mayzinng">
-        <Image src={gitHubIcon.src} alt="github: mayzinng" width={50} height={50}>
+        <Image src={gitHubIcon.src} alt="github: mayzinng" width={50} height={50} >
         </Image>
         <h5>mayzinng</h5>
       </Link>
