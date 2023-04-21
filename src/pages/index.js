@@ -57,8 +57,7 @@ export default function Home() {
       return (
       <div>
        <h4>
-        Aplicação básica para ver o clima da sua cidade, <br></br>
-        Escreva o nome da cidade que deseja
+       Write your city name in the search bar
        </h4>
       </div>
     )
