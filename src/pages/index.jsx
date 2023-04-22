@@ -19,6 +19,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState("");
   const [imgWeather, setImgWeather] = useState(null);
+  const [catchError, setCatchError] = useState("");
 
   const api = {
     base: 'https://api.openweathermap.org/data/2.5/',
@@ -47,6 +48,10 @@ export default function Home() {
         } else if (typeIcon === 'Snow') {
           setImgWeather(iconSnow);
         }
+    })
+    .catch(function(error) {
+      console.log('There has been a problem with your fetch operation: ' + error.message);
+      window.location.href = "error/error-404";
     });
 
   }
@@ -77,6 +82,15 @@ export default function Home() {
             <h5>Max. temperature: {weather?.main?.temp_max.toFixed() + "º"} <br></br> Min. temperature: {Math.floor(weather?.main?.temp_min )+ "º"}</h5>
           </>
         }
+      </div>
+    )
+  } else if (catchError === ''){
+    console.log(weather)
+    return (
+      <div>
+       <h4>
+       Write your city name in the search bar
+       </h4>
       </div>
     )
   }
